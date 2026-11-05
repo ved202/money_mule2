@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+.venv/
+.pytest_cache/
+
+data/raw/
+outputs/models/
+testing_output/models/
+data/processed/feature_matrix.csv
+testing_data/processed/feature_matrix.csv
+*.pkl
+*.pt
+out.log
+fix_mojibake.py
+
+.env

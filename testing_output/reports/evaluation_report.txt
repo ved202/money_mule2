@@ -1,0 +1,28 @@
+======================================================================
+  MULE DETECTION SYSTEM â€” EVALUATION REPORT
+======================================================================
+
+â”€â”€ MODEL PERFORMANCE (test set) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+           Model  Precision  Recall     F1  PR-AUC  ROC-AUC
+ IsolationForest     0.7016  0.5707 0.6294  0.6593   0.8076
+    RandomForest     0.9831  0.4957 0.6591  0.7404   0.8862
+GradientBoosting     1.0000  0.5043 0.6705  0.7438   0.8946
+
+â”€â”€ RECOMMENDED MODEL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Best validation model : GradientBoosting (PR-AUC=0.7438, ROC-AUC=0.8946)
+  Recommendation        : Use this as the primary fraud detector on PaySim.
+
+â”€â”€ EARLY DETECTION (Objective 2) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Total mule accounts      : 552
+  Caught at early stage    : 451
+  Early Detection Gain     : 81.70%
+  Stage distribution       : {'Recruitment': 426, 'Dormant': 101, 'Activation': 25}
+  Status                   : heuristic
+  Interpretation           : Treat lifecycle output as heuristic until separately validated.
+
+â”€â”€ COMMUNITY DETECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Suspicious communities   : 17
+  Community recall         : 78.08%
+
+â”€â”€ SUSPICIOUS ACCOUNT SUMMARY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Total suspicious accounts: 875
